@@ -6,13 +6,13 @@
     {% if article.image %}
     <img class="u-max-full-width" src="images/{{ article.image }}"/>
     {% endif %}
-      <h2 class="title">
+      <h4 class="title">
         <a href="{{ SITEURL }}/{{ article.url }}" 
           rel="bookmark"
           title="Permalink to {{ article.title|striptags }}">
           {{ article.title }}
         </a>
-      </h2>
+      </h4>
 
     {{ article.content }}
   </article><!-- /.entry-content -->
