@@ -1,0 +1,83 @@
+.container {
+  max-width: 800px; }
+
+header {
+  margin-top: 2rem;}
+
+  .content {
+  margin-top: 4rem;}
+
+.logo-container {
+  display: block;
+}
+.logo {
+  text-align: center;
+  vertical-align: top;
+}
+
+.logo-text {
+  font-family: "Questrial", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+  color: #9BADC1; 
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.logo-red {
+  color: #BF2E22;
+  vertical-align: inherit;
+}
+.logo-grey {
+  color: #9BADc1;
+  vertical-align: inherit;
+}
+
+  .logo-image {
+    display: inline;
+    margin: 0 auto;
+  }
+
+  .title {
+  text-align: center; }
+
+/* Navbar */
+  .navbar,
+  .navbar-spacer {
+    display: block;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+  .navbar-list {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0; }
+  .navbar-item {
+    margin-bottom: 0; }
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-left: 25px;
+    text-decoration: none;
+    line-height: 3.5rem;
+    color: #222; }
+  .navbar-link.active {
+    color: #33C3F0; }
+/* Larger than phone */
+@media (min-width: 550px) {
+  header {
+    margin-top: 2rem; }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .has-docked-nav .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; }
+}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="content" class="content">
+<div class="container">
+<div class="row">
+  {% for article in articles_page.object_list %}
+  {# 
+   # If the article has a thumbnail, then feature it on the home page 
+   #}
+
+  {% if article.thumbnail %}
+  <div class="one-half column">
+      <a href="{{ SITEURL }}/{{ article.category.url }}" 
+        rel="bookmark" 
+        title="Permalink to {{ article.category }}">
+        <img class="u-max-full-width"
+          src="images/{{ article.thumbnail }}"/>
+      </a>
+  </div>
+  {% endif %}
+  <!-- entry-content -->
+  {% endfor %}
+</div>
+</div>
+</section><!-- content -->
+{% endblock content %}

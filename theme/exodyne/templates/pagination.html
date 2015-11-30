@@ -1,0 +1,11 @@
+{% if DEFAULT_PAGINATION %}
+<div class="pager">
+  <ul>
+    {% for page in PAGES %}
+      <li class="previous">
+        <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+      </li>
+    {% endfor  %}
+  </ul>
+</div>
+{% endif %}
