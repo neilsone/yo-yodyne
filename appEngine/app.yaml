@@ -1,0 +1,52 @@
+application: yo-yodyne
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+error_handlers:
+- file: error.html
+
+handlers:
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
+  upload: static/(.*\.css)
+ 
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: static/\1
+  upload: static/(.*\.html)
+ 
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: static/\1
+  upload: static/(.*\.txt)
+ 
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: static/\1
+  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+- url: /theme/images/.*\.svg
+  static_dir: static/theme/images
+  http_headers:
+    content_type: image/svg+xml
+
+- url: /theme/images
+  static_dir: static/theme/images
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: static/\1
+  upload: static/(.*\.(svg|svgz))
+ 
+# index files
+- url: /(.+)/
+  static_files: static/\1/index.html
+  upload: static/(.+)/index.html
+ 
+# site root
+- url: /
+  static_files: static/index.html
+  upload: static/index.html

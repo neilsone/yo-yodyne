@@ -1,70 +1,132 @@
-header {
-  margin-top: 2rem;}
+/* ==========================================================================
+ *    Exodyne Theme for Yo-Yodyne.com
+ *    Extension of skeleton responsive boilerplate getskeleton.com
+ *
+ *    Grid Layout
+ * ========================================================================== */
 
-  .content {
+/**
+ * Grid container
+ *
+ * Max width of 800px. 
+ *
+ * TODO: Ideally there would be no fixed width, but with
+ * skeleton it has a max of 960px. Consider moving to another non-fixed
+ * width boilderplate.
+ */
+
+.container {
+  max-width: 800px;
+}
+
+header {
+  margin-top: 2rem;
+}
+
+.content {
   margin-top: 4rem;}
 
+/* Logo Styling
+ * ========================================================================== */
+
+/**
+ * Logo is svg, to center align, it must be displayed as a block element
+ */
 .logo-container {
   display: block;
 }
+
 .logo {
   text-align: center;
   vertical-align: top;
 }
 
 .logo-text {
-  font-family: "Questrial", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3.0rem;
   line-height: 1.3;
   letter-spacing: -.1rem;
-  color: #9BADC1; 
   text-decoration: none;
   vertical-align: top;
+  color: #9BADC1; 
+  font-size: 3.0rem;
+  font-family: "Questrial", "HelveticaNeue", "Helvetica Neue", 
+    Helvetica, Arial, sans-serif;
 }
 
 .logo-red {
+  vertical-align: inherit;
   color: #BF2E22;
-  vertical-align: inherit;
 }
+
 .logo-grey {
-  color: #9BADc1;
   vertical-align: inherit;
+  color: #9BADc1;
 }
 
-  .logo-image {
-    display: inline;
-    margin: 0 auto;
-  }
+.logo-image {
+  display: inline;
+  margin: 0 auto;
+}
 
-  .title {
-  text-align: center; }
 
-/* Navbar */
-  .navbar,
-  .navbar-spacer {
-    display: block;
-    width: 100%;
-    background: #fff;
-    z-index: 99;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee; }
-  .navbar-list {
-    list-style: none;
-    text-align: center;
-    margin-bottom: 0; }
-  .navbar-item {
-    margin-bottom: 0; }
-  .navbar-link {
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .2rem;
-    margin-left: 25px;
-    text-decoration: none;
-    line-height: 3.5rem;
-    color: #222; }
-  .navbar-link.active {
-    color: #33C3F0; }
+/* Navbar Styling
+ * ========================================================================== */
+
+/**
+ * Set z-index artibrarily high to remain on top of all other elements
+ */
+.navbar,
+.navbar-spacer {
+  display: block;
+  width: 100%;
+  z-index: 99;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; 
+  background: #fff;
+}
+
+.navbar-list {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 0; }
+.navbar-item {
+  margin-bottom: 0; }
+.navbar-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  margin-left: 25px;
+  text-decoration: none;
+  line-height: 3.5rem;
+  color: #222; }
+.navbar-link.active {
+  color: #33C3F0; }
+
+/* Article Styling
+ * ========================================================================== */
+
+.article-title {
+  text-align: center; 
+}
+
+span.img-title {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  color: white;
+}
+
+span.img-title span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.one-half.column:hover span.img-title {
+  opacity: 1;
+}
+
 /* Larger than phone */
 @media (min-width: 550px) {
   header {
@@ -77,4 +139,12 @@ header {
     position: fixed;
     top: 0;
     left: 0; }
+
+    .img-title {
+      opacity: 0;
+      -webkit-transition: opacity 500ms;
+      -moz-transition: opacity 500ms;
+      -o-transition: opacity 500ms;
+      transition: opacity 500ms;
+    }
 }
