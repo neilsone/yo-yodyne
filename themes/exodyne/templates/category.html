@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{ category }} - {{SITENAME}}{% endblock title %}
+{% block content %}
+<section id="content" class="article">
+{% set count = 1 %}
+{% for article in articles %}
+
+  {# Add a new row every odd time through to add two thumbnails per row #}
+  {% if count is equalto 1 %}
+  <div class="row">
+  {% endif %}A
+    <div class="one-half column">
+        <span class="img-title">
+          <span>{{ article.category }}</span>
+          </span>
+          <a href="{{ SITEURL }}/{{ article.category.url }}" 
+          rel="bookmark" 
+          title="Permalink to {{ article.category }}">
+          <img class="u-max-full-width"
+          src="images/{{ article.thumbnail }}"/>
+        </a>
+      </div>
+    {% if count is equalto 2 %}
+      {% set count = 1 %}
+    </div><!-- row -->
+    {% else %}
+      {% set count = 2 %}
+    {% endif %}
+{% endfor %}
+{% if count is equalto 2 %}
+    </div><!-- row -->
+{% endif %}
+</div>
+</section><!-- content -->
+{% endblock content %}

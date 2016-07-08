@@ -19,7 +19,7 @@ TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = u'en'
 
 DIRECT_TEMPLATES = ['index', 'archives','categories']
-THEME = "exodyne"
+THEME = "svbhack"
 
 OUTPUT_PATH = 'output/static'
 # Feed generation is usually not desired when developing
