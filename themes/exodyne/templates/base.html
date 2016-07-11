@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% block head %}
+{% block head %}
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->                 
     <meta charset="utf-8" />
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta charset="utf-8" />
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -16,10 +17,10 @@
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" 
-    rel="stylesheet" type="text/css">
+      rel="stylesheet" type="text/css">
     <link hfef="//fonts.googleapis.com/css?family=Questrial:400"
-    rel="stylesheet" type="text/css">
-
+      rel="stylesheet" type="text/css">
+    
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" 
@@ -28,6 +29,11 @@
       href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css">
     <link rel="stylesheet" 
       href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/custom.css">
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+      </script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -76,7 +82,7 @@
       type="application/rss+xml" rel="alternate" 
       title="{{ SITENAME }} Tags RSS Feed" />
     {% endif %}
-    {% endblock head %}
+{% endblock head %}
   </head>
   <body>
     <!-- Primary Page Layout
@@ -85,23 +91,24 @@
       <header>
       <div class="logo-container">
         <div class="logo">
-            <object type="image/svg+xml"
-              data="{{ SITEURL }}/{{THEME_STATIC_DIR }}/images/YoYoDyne.svg">SVG Unsupported
-          </object>
-        <a class="logo-text"
-          href="{{ SITEURL }}/index.html"><span class="logo-red">Yo-Yo</span><span class="logo-grey">dyne</span></a>
+          <img src="{{ SITEURL }}/{{THEME_STATIC_DIR }}/images/YoYoDyne.svg"
+            onerror="this.src='yoyodyne.png'">
+          <a class="logo-text"
+            href="{{ SITEURL }}/index.html">
+            <span class="logo-red">Yo-Yo</span><span class="logo-grey">dyne</span>
+          </a>
+        </div>
+        </div>
+      <nav class="navbar">
+      <div class="container navbar-list">
+        <a class="navbar-link"
+          href="{{ PARENTURL }}/index.html">Home</a>
+        <a class="navbar-link" 
+          href="{{ SITEURL }}/articles.html">Articles</a>
+        <a class="navbar-link" 
+          href="{{ SITEURL }}/colophon.html">Colophon</a>
       </div>
-      </div>
-        <nav class="navbar">
-          <div class="container navbar-list">
-              <a class="navbar-link"
-                href="{{ SITEURL }}/index.html">Home</a>
-              <a class="navbar-link" 
-                href="{{ SITEURL }}/articles.html">Articles</a>
-              <a class="navbar-link" 
-                href="{{ SITEURL }}/about.html">About</a>
-          </div>
-        </nav>
+      </nav>
       </header>
       {% block content %}
       {% endblock %}

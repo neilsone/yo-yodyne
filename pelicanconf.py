@@ -3,10 +3,11 @@
 from __future__ import unicode_literals
 
 SITENAME = u'Yo-Yodyne'
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
+PARENTURL = 'http://www.yo-yodyne.com'
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'appEngineConfig']
+STATIC_PATHS = ['audio', 'images', 'appEngineConfig']
 EXTRA_PATH_METADATA = {
             'appEngineConfig/app.yaml': {'path': 'app.yaml'},
                 }
@@ -19,7 +20,7 @@ TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = u'en'
 
 DIRECT_TEMPLATES = ['index', 'archives','categories']
-THEME = "svbhack"
+THEME = "exodyne"
 
 OUTPUT_PATH = 'output/static'
 # Feed generation is usually not desired when developing

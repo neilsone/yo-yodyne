@@ -7,6 +7,7 @@
   {% if article.category|string() == 'Article' %}
   <dt>{{ article.locale_date }}</dt>
   <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+  <dd>{{article.summary|striptags}}</dd>
   {% endif %}
   {% endfor %}
 </dl>

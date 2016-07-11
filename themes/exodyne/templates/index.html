@@ -4,40 +4,15 @@
 <div class="container">
 {% set count = 1 %}
 {% for article in articles_page.object_list %}
-    {# 
-   # If the article has a thumbnail, then feature it on the home page 
-   #}
-
-  {% if article.thumbnail %}
-  {#
-   # Add a new row every odd time through the loop since the 
-   # thumbnails are two per row
-   #}
-    {% if count is equalto 1 %}
-    <div class="row">
-    {% endif %}
-      <div class="one-half column">
-        <span class="img-title">
-          <span>{{ article.category }}</span>
-          </span>
-          <a href="{{ SITEURL }}/{{ article.category.url }}" 
+  <div class="row">
+    <div class="article-title">
+      <a href="{{ SITEURL }}/{{ article.category.url }}" 
           rel="bookmark" 
           title="Permalink to {{ article.category }}">
-          <img class="u-max-full-width"
-          src="images/{{ article.thumbnail }}"/>
-        </a>
-      </div>
-    {% if count is equalto 2 %}
-      {% set count = 1 %}
-    </div><!-- row -->
-    {% else %}
-      {% set count = 2 %}
-    {% endif %}
-  {% endif %}
+      </a>
+    </div>
+  </div><!-- row -->
 {% endfor %}
-{% if count is equalto 2 %}
-    </div><!-- row -->
-{% endif %}
 </div>
 </section><!-- content -->
 {% endblock content %}

@@ -10,4 +10,4 @@ The content of the voicemails was fantastic. People said really amazing things. 
 
 I'm very thankful my sister did an incredible job writing and delivering a traditional eulogy. This however was very fitting for who I am. As a kid, I used to regularly dismantle my Dad's cabinet of Hi-Fi gear and patch all of it together via a small Radio Shack mixing board. Using this chaotic setup I'd browse through my Dad's Reel-to-Reel, vinyl, and CD collection which I'd then mix with audio taped off the radio or VHS movies. I knew my Dad was not at all happy that I was rewiring his stereo and FULLY exercising the play, pause, record button. I was extremely careful to put it all back exactly as I had found it so he tolerated it.
 
-Thanks to everyone who called in and left a voicemail. Furthermore, thanks to computers no pause buttons were harmed in the production of this voice mail memorial for my Dad, Neil E. Eney, Jr. 
+Thanks to everyone who called in and left a voicemail. Furthermore, thanks to computers no pause buttons were harmed in the production of this [voice mail memorial for my Dad, Neil E. Eney, Jr.](audio/NeilMemorial.mp3 "Neil Memorial") 

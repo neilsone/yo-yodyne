@@ -4,7 +4,7 @@
 <section id="content" class="article content">
   <article class="entry-content">
     {% if article.image %}
-    <img class="u-max-full-width" src="images/{{ article.image }}"/>
+    <img class="u-max-full-width" src="{{ article.image }}"/>
     {% endif %}
       <h4 class="title">
         <a href="{{ SITEURL }}/{{ article.url }}" 
