@@ -1,18 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content" class="content">
-<div class="container">
-{% set count = 1 %}
-{% for article in articles_page.object_list %}
-  <div class="row">
-    <div class="article-title">
-      <a href="{{ SITEURL }}/{{ article.category.url }}" 
-          rel="bookmark" 
-          title="Permalink to {{ article.category }}">
-      </a>
-    </div>
-  </div><!-- row -->
-{% endfor %}
-</div>
-</section><!-- content -->
-{% endblock content %}
+<h1>Articles</h1>
+
+<dl>
+  {% for article in dates %}
+  {% if article.category|string() == 'Article' %}
+  <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
+  <dd>{{ article.locale_date }}</dd>
+    <dd>{{article.summary|striptags}}</dd>
+  {% endif %}
+  {% endfor %}
+</dl>
+{% endblock %}

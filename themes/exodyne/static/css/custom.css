@@ -8,15 +8,12 @@
 /**
  * Grid container
  *
- * Max width of 800px. 
- *
- * TODO: Ideally there would be no fixed width, but with
- * skeleton it has a max of 960px. Consider moving to another non-fixed
- * width boilderplate.
+ * Limit container to 628px to give an approximate cpl of 95 to aid 
+ * readability
  */
 
 .container {
-  max-width: 800px;
+  max-width: 628px;
 }
 
 header {
@@ -25,6 +22,16 @@ header {
 
 .content {
   margin-top: 4rem;}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #9BADC1; 
+  text-decoration: none;
+}
+a:hover {
+  color: #BF2E22; 
+}
 
 /* Logo Styling
  * ========================================================================== */
@@ -48,8 +55,7 @@ header {
   vertical-align: top;
   color: #9BADC1; 
   font-size: 3.0rem;
-  font-family: "Questrial", "HelveticaNeue", "Helvetica Neue", 
-    Helvetica, Arial, sans-serif;
+  font-family: "Questrial", sans-serif; 
 }
 
 .logo-red {
@@ -104,10 +110,6 @@ header {
 
 /* Article Styling
  * ========================================================================== */
-
-.article-title {
-  text-align: center; 
-}
 
 span.img-title {
   display: block;
