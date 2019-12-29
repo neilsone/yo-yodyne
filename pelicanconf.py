@@ -18,6 +18,7 @@ PAGE_SAVE_AS = '{slug}.html'
 TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = u'en'
+DEFAULT_DATE_FORMAT = '%Y-%B-%d'
 
 DIRECT_TEMPLATES = ['index', 'archives','categories']
 THEME = "exodyne"

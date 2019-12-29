@@ -1,41 +1,64 @@
-/* ==========================================================================
- *    Exodyne Theme for Yo-Yodyne.com
- *    Extension of skeleton responsive boilerplate getskeleton.com
+/** 
+ *  Exodyne Theme for Yo-Yodyne.com
+ *  Extension of skeleton responsive boilerplate getskeleton.com
  *
- *    Grid Layout
- * ========================================================================== */
+ *  Released under MIT license. Copyright 2016 Neilson P. Eney
+ */
 
+/*  Table of Contents
+- Grid
+- Base Styles
+- Typography
+- Logo
+- Links
+- Nav
+- Images
+*/
+
+/* Grid
+-------------------------------------------------- */
 /**
  * Grid container
  *
  * Limit container to 628px to give an approximate cpl of 95 to aid 
  * readability
  */
-
 .container {
   max-width: 628px;
 }
 
+/* Base Styles
+-------------------------------------------------- */
 header {
   margin-top: 2rem;
 }
 
 .content {
-  margin-top: 4rem;}
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: #9BADC1; 
-  text-decoration: none;
-}
-a:hover {
-  color: #BF2E22; 
+  margin-top: 4rem;
 }
 
-/* Logo Styling
- * ========================================================================== */
+body {
+  font-family: 'Libre Baskerville', serif;
+}
 
+/* Typography
+-------------------------------------------------- */
+@font-face {
+  font-family: 'pier_sansregular';
+  src: url('../fonts/PierSans/pier-regular-webfont.woff2') format('woff2'),
+  url('../fonts/PierSans/pier-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'pier_sansregular', sans-serif;
+  letter-spacing: normal;
+}
+
+
+/* Logo
+-------------------------------------------------- */
 /**
  * Logo is svg, to center align, it must be displayed as a block element
  */
@@ -49,13 +72,14 @@ a:hover {
 }
 
 .logo-text {
-  line-height: 1.3;
-  letter-spacing: -.1rem;
+  line-height: 1.5;
+  letter-spacing: normal;
   text-decoration: none;
   vertical-align: top;
   color: #9BADC1; 
   font-size: 3.0rem;
-  font-family: "Questrial", sans-serif; 
+  /*font-family: 'pier_sansregular', sans-serif;*/
+  font-family: "Questrial", sans-serif;
 }
 
 .logo-red {
@@ -73,10 +97,18 @@ a:hover {
   margin: 0 auto;
 }
 
+/* Links
+-------------------------------------------------- */
+a {
+  color: #9BADC1; 
+  text-decoration: none;
+}
+a:hover {
+  color: #BF2E22; 
+}
 
-/* Navbar Styling
- * ========================================================================== */
-
+/* Nav
+-------------------------------------------------- */
 /**
  * Set z-index artibrarily high to remain on top of all other elements
  */
@@ -92,10 +124,13 @@ a:hover {
 
 .navbar-list {
   list-style: none;
+  font-family: "Questrial", sans-serif; 
   text-align: center;
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+}
 .navbar-item {
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+}
 .navbar-link {
   text-transform: uppercase;
   font-size: 11px;
@@ -104,13 +139,14 @@ a:hover {
   margin-left: 25px;
   text-decoration: none;
   line-height: 3.5rem;
-  color: #222; }
+  color: #222; 
+}
 .navbar-link.active {
-  color: #33C3F0; }
+  color: #33C3F0; 
+}
 
-/* Article Styling
- * ========================================================================== */
-
+/* Images
+-------------------------------------------------- */
 span.img-title {
   display: block;
   cursor: pointer;

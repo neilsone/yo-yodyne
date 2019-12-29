@@ -1,13 +1,30 @@
-Title: Voicemail Memorial
+Title: Voice Mail Memorial
 Date: 2016-01-17
 Category: Article
 
-In January of 2012 my father was diagnosed with Lung Cancer (Stage IV). While he fought to hold the cancer back, in October during a stay at the hospital, the doctors eventually told him they could no longer treat him. The disease and progressed too far. They told him to return home and enter hospice care. Just a week prior he had been hanging out at a local Starbucks with his friends. Therefore this setback, while not unexpected, happened faster than we all anticipated.
+In January, 2012 my father was diagnosed with Stage IV Lung Cancer. Nine months
+later in October during a stay at the hospital, the doctors told him they could
+no longer treat him because his disease had progressed too far. They told him
+to return home and enter hospice care. Just a week prior he had been hanging
+out with his friends at his favorite Starbucks. The setback wasn't unexpected,
+but happened faster than we all anticipated.
 
-When he returned home, news of his transition to hospice care spread quickly. Letters and cards from friends and family poured in. Many were wonderfully written. As his disease progressed and he got weaker, he was no longer able to read the cards himself. He could however hear and understand what people said to him. Therefore I decided I'd hand out my Google Voice phone number and invite people to leave their messages for him in the form of voicemail. That day dozens of messages started arriving every day. We played them for my Dad so he was able to hear the messages from people in their own voices. 
+When he returned home news of his transition to hospice care spread quickly.
+Letters and cards from friends and family poured in. As his disease progressed
+and he got weaker, he was no longer able to read the cards himself. He could
+however hear and understand what people said to him. I handed out my Google
+Voice phone number and invited people to leave their messages for him in the
+form of voice mail. That day dozens of messages started arriving every day. We
+played them for my dad so he was able to hear the messages from people in their
+own voices. 
 
-The content of the voicemails was fantastic. People said really amazing things. The messages helped my Dad know that lots of people were thinking of him, remembering him and reaching out to him. As I listened to the messages I thought, "Wow, I wish I could just play these rather than writing a eulogy. Wait, that's exactly what I'm going to do!" Since the voicemails were in Google Voice I was able to download them and edit them on my computer.
+The content of the phone calls were beautiful and touching. The messages helped
+my dad know that lots of people were thinking of him and reaching out to him.
+On October 27 he passed away. As I was preparing for the memorial service, I
+listened to the messages and came up with the idea of using them in the
+memorial service. Since the voice mails were in Google Voice I downloaded them
+and edited them together to serve as my eulogy to my father.
 
-I'm very thankful my sister did an incredible job writing and delivering a traditional eulogy. This however was very fitting for who I am. As a kid, I used to regularly dismantle my Dad's cabinet of Hi-Fi gear and patch all of it together via a small Radio Shack mixing board. Using this chaotic setup I'd browse through my Dad's Reel-to-Reel, vinyl, and CD collection which I'd then mix with audio taped off the radio or VHS movies. I knew my Dad was not at all happy that I was rewiring his stereo and FULLY exercising the play, pause, record button. I was extremely careful to put it all back exactly as I had found it so he tolerated it.
+Thanks to everyone who called in and left a voice mail.
 
-Thanks to everyone who called in and left a voicemail. Furthermore, thanks to computers no pause buttons were harmed in the production of this [voice mail memorial for my Dad, Neil E. Eney, Jr.](audio/NeilMemorial.mp3 "Neil Memorial") 
+[Voice Mail Memorial for , Neil E. Eney, Jr.](audio/NeilMemorial.mp3 "Neil Memorial") 

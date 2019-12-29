@@ -5,8 +5,8 @@
 <dl>
   {% for article in dates %}
   {% if article.category|string() == 'Article' %}
-  <dt><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dt>
-  <dd>{{ article.locale_date }}</dd>
+  <dt><h5><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h5></dt>
+  <dd><span class="post-date">{{ article.locale_date }}</span></dd>
     <dd>{{article.summary|striptags}}</dd>
   {% endif %}
   {% endfor %}
