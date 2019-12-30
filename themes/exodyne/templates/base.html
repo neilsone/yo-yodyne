@@ -103,8 +103,10 @@
       <div class="container navbar-list">
         <a class="navbar-link" 
           href="{{ SITEURL }}/index.html">Articles</a>
+        {% for page in pages %} 
         <a class="navbar-link" 
-          href="{{ SITEURL }}/colophon.html">Colophon</a>
+           href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+        {% endfor %}
       </div>
       </nav>
       </header>
