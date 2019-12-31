@@ -1,6 +1,6 @@
 PY?=python3
 PELICAN?=pelican
-PELICANOPTS=
+PELICANOPTS=-t themes/exodyne
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
