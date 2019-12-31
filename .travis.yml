@@ -15,7 +15,7 @@ before_deploy:
   -in id_rsa_oci_deploy.enc -out id_rsa_oci_deploy -d
 - eval "$(ssh-agent -s)"
 - chmod 600 id_rsa_oci_deploy
-- ssh-add id_rsa_oci-deploy
+- ssh-add id_rsa_oci_deploy
 - echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 deploy:
