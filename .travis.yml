@@ -21,8 +21,7 @@ before_deploy:
 deploy:
     provider: script
     skip_cleanup: true
-    script: echo "$TRAVIS_BUILD_DIR/output"
-    script: rsync -r -a -v -e ssh --delete-after $TRAVIS_BUILD_DIR/output $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
+    script: rsync -r -a -v -e ssh --delete-after $TRAVIS_BUILD_DIR/output/ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
     on:
         branch: master
     
