@@ -1,0 +1,44 @@
+name: Spec Lint
+
+on:
+  pull_request:
+    paths: ['openspec/**']
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check spec frontmatter
+        run: |
+          ERRORS=0
+          for spec in openspec/specs/*/spec.md; do
+            if [ -f "$spec" ]; then
+              if ! head -5 "$spec" | grep -q "^# Spec:"; then
+                echo "::error file=$spec::Missing '# Spec:' header"
+                ERRORS=$((ERRORS + 1))
+              fi
+              if ! grep -q "^## Requirement:" "$spec"; then
+                echo "::warning file=$spec::No '## Requirement:' section found"
+              fi
+            fi
+          done
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS spec(s) failed validation"
+            exit 1
+          fi
+          echo "All specs passed lint checks."
+
+      - name: Check normative language
+        run: |
+          echo "Checking for normative language (SHALL/MUST) in specs..."
+          for spec in openspec/specs/*/spec.md; do
+            if [ -f "$spec" ]; then
+              COUNT=$(grep -cE '\bSHALL\b|\bMUST\b|\bMAY\b' "$spec" || echo "0")
+              echo "$spec: $COUNT normative statements"
+              if [ "$COUNT" -eq 0 ]; then
+                echo "::warning file=$spec::No normative language found — is this a complete spec?"
+              fi
+            fi
+          done

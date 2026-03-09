@@ -1,0 +1,16 @@
+# OpenSpec Configuration — Yo-Yodyne Labs
+project_name: yo-yodyne
+version: 0.1.0-alpha
+spec_dir: openspec/specs
+changes_dir: openspec/changes
+archive_dir: openspec/archive
+
+# OPSX workflow settings
+workflow: opsx
+auto_archive: false
+
+# Release channels
+release_channels:
+  - alpha
+  - beta
+  - stable

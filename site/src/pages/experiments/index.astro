@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ContentCard from '../../components/ContentCard.astro';
+
+const experiments = (await getCollection('experiments'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Experiments">
+  <section>
+    <h1>Experiments</h1>
+    <p class="intro muted">Hypotheses tested, observations recorded.</p>
+
+    {experiments.length > 0 ? (
+      <div class="posts">
+        {experiments.map((exp) => (
+          <ContentCard
+            title={exp.data.title}
+            href={`/labs/experiments/${exp.id}/`}
+            date={exp.data.date}
+            description={exp.data.hypothesis}
+            tags={exp.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty muted">Experiments are being designed. Check back.</p>
+    )}
+  </section>
+</Base>
+
+<style>
+  h1 { margin-bottom: var(--space-sm); }
+  .intro { margin-bottom: var(--space-xl); }
+  .empty { margin-top: var(--space-xl); }
+</style>

@@ -1,0 +1,49 @@
+name: Release Readiness Review
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  rrr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determine release channel
+        id: channel
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          if [[ "$TAG" == *"-alpha"* ]]; then
+            echo "channel=alpha" >> "$GITHUB_OUTPUT"
+          elif [[ "$TAG" == *"-beta"* ]]; then
+            echo "channel=beta" >> "$GITHUB_OUTPUT"
+          else
+            echo "channel=stable" >> "$GITHUB_OUTPUT"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Check for open tasks
+        run: |
+          OPEN_TASKS=$(grep -c '^\- \[ \]' openspec/changes/*/tasks.md 2>/dev/null || echo "0")
+          echo "Open tasks: $OPEN_TASKS"
+          if [ "$OPEN_TASKS" -gt 0 ] && [ "${{ steps.channel.outputs.channel }}" = "stable" ]; then
+            echo "::error::Stable release blocked: $OPEN_TASKS open tasks remain"
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install and build site
+        working-directory: site
+        run: npm ci && npm run build
+
+      - name: Release summary
+        run: |
+          echo "## Release: ${{ steps.channel.outputs.tag }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Channel:** ${{ steps.channel.outputs.channel }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "**Build:** Passed" >> "$GITHUB_STEP_SUMMARY"

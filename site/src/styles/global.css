@@ -1,0 +1,147 @@
+/* Yo-Yodyne Labs — Design Tokens & Base Styles */
+/* NOTE: Visual design is intentionally foundational. Will be refined iteratively. */
+
+/* --- Fonts --- */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/labs/fonts/cormorant-garamond-v16-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/labs/fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/labs/fonts/karla-v31-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/labs/fonts/karla-v31-latin-regular.woff2') format('woff2');
+}
+
+/* --- Tokens --- */
+:root {
+  --ink: #2c2c2c;
+  --paper: #f5f2ed;
+  --stone: #8a8378;
+  --shadow: #d4cfc7;
+  --accent: #b8a88a;
+  --void: #1a1917;
+
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Karla', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Menlo', monospace;
+
+  --line-height: 1.7;
+  --measure: 65ch;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 8rem;
+
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration: 350ms;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base --- */
+html {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  color: var(--ink);
+  background-color: var(--paper);
+  line-height: var(--line-height);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--ink);
+  text-decoration-color: var(--shadow);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration) var(--ease),
+              opacity var(--duration) var(--ease);
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--shadow);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+pre {
+  background: var(--void);
+  color: var(--paper);
+  padding: var(--space-lg);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* --- Utilities --- */
+.muted {
+  color: var(--stone);
+}
+
+.small {
+  font-size: 0.875rem;
+}

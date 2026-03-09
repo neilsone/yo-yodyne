@@ -1,0 +1,78 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  hypothesis: string;
+  status: string;
+  date: Date;
+  tags?: string[];
+}
+
+const { title, hypothesis, status, date, tags } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const statusColors: Record<string, string> = {
+  planned: 'var(--stone)',
+  active: 'var(--accent)',
+  complete: 'var(--ink)',
+  archived: 'var(--shadow)',
+};
+---
+<Base title={title}>
+  <article class="experiment">
+    <header>
+      <div class="status-line small">
+        <span class="status" style={`color: ${statusColors[status] || 'var(--stone)'}`}>
+          {status}
+        </span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </div>
+      <h1>{title}</h1>
+      <blockquote class="hypothesis">
+        <p>{hypothesis}</p>
+      </blockquote>
+      {tags && tags.length > 0 && (
+        <div class="tags muted small">{tags.join(' · ')}</div>
+      )}
+    </header>
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .experiment header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .status-line {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .hypothesis {
+    border-left: 2px solid var(--accent);
+    padding-left: var(--space-lg);
+    margin-top: var(--space-md);
+    font-style: italic;
+    color: var(--stone);
+  }
+
+  .content :global(h2) {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .content :global(p) {
+    margin-bottom: var(--space-md);
+  }
+</style>

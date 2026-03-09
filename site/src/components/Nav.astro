@@ -1,0 +1,57 @@
+---
+// Nav — minimal top bar
+---
+<nav>
+  <a href="/labs/" class="logo">Yo-Yodyne Labs</a>
+  <div class="links">
+    <a href="/labs/research/">Research</a>
+    <a href="/labs/experiments/">Experiments</a>
+    <a href="/labs/projects/">Projects</a>
+    <a href="/labs/about/">About</a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--shadow);
+    margin-bottom: var(--space-xl);
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .links {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .links a {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--stone);
+    transition: color var(--duration) var(--ease);
+  }
+
+  .links a:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .links {
+      gap: var(--space-md);
+    }
+  }
+</style>

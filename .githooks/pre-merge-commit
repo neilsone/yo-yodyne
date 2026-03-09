@@ -1,0 +1,7 @@
+#!/bin/sh
+# Ensure merges to main are GPG-signed
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$BRANCH" = "main" ]; then
+  export GIT_COMMITTER_SIGN=1
+  git config commit.gpgsign true
+fi

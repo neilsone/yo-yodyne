@@ -1,0 +1,7 @@
+name = "yo-yodyne-labs-proxy"
+main = "labs-proxy.js"
+compatibility_date = "2026-03-08"
+
+# Route configuration — set up in Cloudflare dashboard:
+# Route pattern: yo-yodyne.com/labs/*
+# Zone: yo-yodyne.com

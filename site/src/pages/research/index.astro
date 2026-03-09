@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ContentCard from '../../components/ContentCard.astro';
+
+const posts = (await getCollection('research'))
+  .filter((post) => post.data.status === 'published')
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Research">
+  <section>
+    <h1>Research</h1>
+    <p class="intro muted">Explorations — accessible treatments alongside technical depth.</p>
+
+    {posts.length > 0 ? (
+      <div class="posts">
+        {posts.map((post) => (
+          <ContentCard
+            title={post.data.title}
+            href={`/labs/research/${post.id}/`}
+            date={post.data.date}
+            description={post.data.abstract}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    ) : (
+      <p class="empty muted">Research articles are in progress. Check back.</p>
+    )}
+  </section>
+</Base>
+
+<style>
+  h1 { margin-bottom: var(--space-sm); }
+  .intro { margin-bottom: var(--space-xl); }
+  .empty { margin-top: var(--space-xl); }
+</style>

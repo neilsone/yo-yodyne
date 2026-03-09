@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Home">
+  <section class="hero">
+    <h1>Yo-Yodyne Labs</h1>
+    <p class="tagline">Research, engineering, and creative production.</p>
+  </section>
+
+  <section class="sections">
+    <a href="/labs/research/" class="section-link">
+      <h2>Research</h2>
+      <p class="muted">Explorations in science and engineering — accessible treatments alongside technical depth.</p>
+    </a>
+    <a href="/labs/experiments/" class="section-link">
+      <h2>Experiments</h2>
+      <p class="muted">Hypotheses tested, observations recorded, results analyzed.</p>
+    </a>
+    <a href="/labs/projects/" class="section-link">
+      <h2>Projects</h2>
+      <p class="muted">Active and archived builds — software, tools, and creative works.</p>
+    </a>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .tagline {
+    font-size: 1.125rem;
+    color: var(--stone);
+  }
+
+  .sections {
+    display: grid;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+  }
+
+  .section-link {
+    text-decoration: none;
+    display: block;
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--shadow);
+    transition: opacity var(--duration) var(--ease);
+  }
+
+  .section-link:hover {
+    opacity: 0.7;
+  }
+
+  .section-link h2 {
+    margin-bottom: var(--space-sm);
+  }
+</style>

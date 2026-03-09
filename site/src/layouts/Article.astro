@@ -1,0 +1,111 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  date: Date;
+  authors?: string[];
+  tags?: string[];
+  abstract?: string;
+}
+
+const { title, subtitle, date, authors = ['Neilson P. Eney'], tags, abstract } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+<Base title={title} description={abstract}>
+  <article class="article">
+    <header>
+      <h1>{title}</h1>
+      {subtitle && <p class="subtitle">{subtitle}</p>}
+      <div class="meta muted small">
+        <span>{authors.join(', ')}</span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </div>
+      {tags && tags.length > 0 && (
+        <div class="tags muted small">{tags.join(' · ')}</div>
+      )}
+    </header>
+    {abstract && (
+      <aside class="abstract">
+        <p>{abstract}</p>
+      </aside>
+    )}
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .article header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--stone);
+    margin-top: var(--space-sm);
+  }
+
+  .meta {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .tags {
+    margin-top: var(--space-xs);
+  }
+
+  .abstract {
+    border-left: 2px solid var(--accent);
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    color: var(--stone);
+    font-style: italic;
+  }
+
+  .content :global(h2) {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .content :global(h3) {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content :global(p) {
+    margin-bottom: var(--space-md);
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+  }
+
+  .content :global(blockquote) {
+    border-left: 2px solid var(--shadow);
+    padding-left: var(--space-lg);
+    color: var(--stone);
+    margin-bottom: var(--space-md);
+  }
+
+  .content :global(pre) {
+    margin-bottom: var(--space-lg);
+  }
+
+  .content :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: var(--space-lg) 0;
+  }
+</style>
