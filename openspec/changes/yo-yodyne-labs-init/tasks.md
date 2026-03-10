@@ -72,8 +72,8 @@
 - [x] Build experiment log layout
 - [x] Build projects index
 - [x] Create about page
-- [ ] Self-host fonts (Cormorant Garamond, Karla, JetBrains Mono) — download manually
-- [ ] Verify Astro build (`cd site && npm install && npm run build`)
+- [x] Self-host fonts (Cormorant Garamond, Karla — variable woff2)
+- [x] Verify Astro build (`cd site && npm install && npm run build`)
 
 ## Phase 6: Cloudflare Worker
 
@@ -92,16 +92,16 @@
 - [x] Create dependency registry
 - [x] Create RRR checklist template
 - [x] Create CHANGELOG.md
-- [ ] Document external project plugin process (subdomain setup)
+- [x] Document external project plugin process (subdomain setup — in cloudflare-setup.md)
 
 ## Phase 9: Archive & First Release
 
-- [ ] Fix npm cache permissions (`sudo chown -R $(whoami) ~/.npm`)
-- [ ] Run `cd site && npm install && npm run build` to verify
-- [ ] Download and place web fonts in site/public/fonts/
-- [ ] Set up git remote (`git remote add origin https://github.com/neilsone/yo-yodyne.git`)
-- [ ] Initial commit and push
-- [ ] Set up Cloudflare Pages project
-- [ ] Deploy Cloudflare Worker
-- [ ] Configure DNS (switch A records to proxied, add Worker route)
-- [ ] Tag v0.1.0-alpha.1
+- [x] Fix npm cache permissions
+- [x] Run `cd site && npm install && npm run build` to verify
+- [x] Download and place web fonts in site/public/fonts/
+- [x] Set up git remote
+- [x] Initial commit and push to labs-init branch
+- [ ] Set up Cloudflare Pages project (PI — see engineering/guides/cloudflare-setup.md)
+- [ ] Deploy Cloudflare Worker (PI)
+- [ ] Configure DNS (PI — switch A records to proxied, add Worker route)
+- [ ] Push to main and tag v0.1.0-alpha.1
