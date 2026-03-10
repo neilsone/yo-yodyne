@@ -1,34 +1,20 @@
 /* Yo-Yodyne Labs — Design Tokens & Base Styles */
 /* NOTE: Visual design is intentionally foundational. Will be refined iteratively. */
 
-/* --- Fonts --- */
+/* --- Fonts (variable) --- */
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 300 700;
   font-display: swap;
-  src: url('/labs/fonts/cormorant-garamond-v16-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/labs/fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2');
+  src: url('/labs/fonts/cormorant-garamond-variable-latin.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Karla';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 300 700;
   font-display: swap;
-  src: url('/labs/fonts/karla-v31-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/labs/fonts/karla-v31-latin-regular.woff2') format('woff2');
+  src: url('/labs/fonts/karla-variable-latin.woff2') format('woff2');
 }
 
 /* --- Tokens --- */
