@@ -72,8 +72,8 @@
 - [x] Build experiment log layout
 - [x] Build projects index
 - [x] Create about page
-- [ ] Self-host fonts (Cormorant Garamond, Karla, JetBrains Mono) — download manually
-- [ ] Verify Astro build (`cd site && npm install && npm run build`)
+- [x] Self-host fonts (Cormorant Garamond, Karla — variable woff2)
+- [x] Verify Astro build (`cd site && npm install && npm run build`)
 
 ## Phase 6: Cloudflare Worker
 
@@ -92,16 +92,29 @@
 - [x] Create dependency registry
 - [x] Create RRR checklist template
 - [x] Create CHANGELOG.md
-- [ ] Document external project plugin process (subdomain setup)
+- [x] Document external project plugin process (subdomain setup — in cloudflare-setup.md)
+
+## Phase 8b: Brand & Visual Identity
+
+- [x] Source Yo-Yodyne logo (yo-yodyne.svg)
+- [x] Define PNW sunset palette (evergreen #2d4a3e, sunset gold #c4943d, ochre #a08540)
+- [x] Refine logo geometry — symmetric, aligned to original proportions (yo-yodyne-refined.svg)
+- [x] Create portfolio favicon (favicon-portfolio.svg — evergreen + sunset gold, transparent bg)
+- [x] Create labs favicon (favicon.svg — ink-green + ochre on parchment bg)
+- [x] Build LogoMark.astro reusable component (inline SVG, currentColor, configurable size)
+- [x] Integrate logo into Nav (22px mark before site title, evergreen → gold on hover)
+- [x] Integrate logo into Footer (16px mark as quiet signature)
+- [x] Integrate logo into Hero (280px watermark at 30% opacity)
+- [x] Update design tokens (--accent → sunset gold, --paper → #f5f1ea, add --evergreen, --ochre)
 
 ## Phase 9: Archive & First Release
 
-- [ ] Fix npm cache permissions (`sudo chown -R $(whoami) ~/.npm`)
-- [ ] Run `cd site && npm install && npm run build` to verify
-- [ ] Download and place web fonts in site/public/fonts/
-- [ ] Set up git remote (`git remote add origin https://github.com/neilsone/yo-yodyne.git`)
-- [ ] Initial commit and push
-- [ ] Set up Cloudflare Pages project
-- [ ] Deploy Cloudflare Worker
-- [ ] Configure DNS (switch A records to proxied, add Worker route)
-- [ ] Tag v0.1.0-alpha.1
+- [x] Fix npm cache permissions
+- [x] Run `cd site && npm install && npm run build` to verify
+- [x] Download and place web fonts in site/public/fonts/
+- [x] Set up git remote
+- [x] Initial commit and push to labs-init branch
+- [ ] Set up Cloudflare Pages project (PI — see engineering/guides/cloudflare-setup.md)
+- [ ] Deploy Cloudflare Worker (PI)
+- [ ] Configure DNS (PI — switch A records to proxied, add Worker route)
+- [ ] Push to main and tag v0.1.0-alpha.1

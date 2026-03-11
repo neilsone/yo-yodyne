@@ -1,43 +1,31 @@
 /* Yo-Yodyne Labs — Design Tokens & Base Styles */
 /* NOTE: Visual design is intentionally foundational. Will be refined iteratively. */
 
-/* --- Fonts --- */
+/* --- Fonts (variable) --- */
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 300 700;
   font-display: swap;
-  src: url('/labs/fonts/cormorant-garamond-v16-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/labs/fonts/cormorant-garamond-v16-latin-regular.woff2') format('woff2');
+  src: url('/labs/fonts/cormorant-garamond-variable-latin.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Karla';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 300 700;
   font-display: swap;
-  src: url('/labs/fonts/karla-v31-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/labs/fonts/karla-v31-latin-regular.woff2') format('woff2');
+  src: url('/labs/fonts/karla-variable-latin.woff2') format('woff2');
 }
 
 /* --- Tokens --- */
 :root {
   --ink: #2c2c2c;
-  --paper: #f5f2ed;
+  --paper: #f5f1ea;
   --stone: #8a8378;
   --shadow: #d4cfc7;
-  --accent: #b8a88a;
+  --accent: #c4943d;
+  --evergreen: #2d4a3e;
+  --ochre: #a08540;
   --void: #1a1917;
 
   --font-heading: 'Cormorant Garamond', 'Georgia', serif;

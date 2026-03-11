@@ -1,8 +1,12 @@
 ---
+import LogoMark from './LogoMark.astro';
 const year = new Date().getFullYear();
 ---
 <footer>
-  <p class="muted small">&copy; {year} Neilson P. Eney &middot; Yo-Yodyne</p>
+  <div class="footer-content">
+    <LogoMark size={16} class="footer-mark" />
+    <p class="muted small">&copy; {year} Neilson P. Eney &middot; Yo-Yodyne</p>
+  </div>
 </footer>
 
 <style>
@@ -10,5 +14,15 @@ const year = new Date().getFullYear();
     margin-top: var(--space-2xl);
     padding: var(--space-lg) 0;
     border-top: 1px solid var(--shadow);
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .footer-content :global(.footer-mark) {
+    color: var(--shadow);
   }
 </style>

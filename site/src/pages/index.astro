@@ -1,8 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import LogoMark from '../components/LogoMark.astro';
 ---
 <Base title="Home">
   <section class="hero">
+    <div class="hero-watermark">
+      <LogoMark size={280} class="watermark" />
+    </div>
     <h1>Yo-Yodyne Labs</h1>
     <p class="tagline">Research, engineering, and creative production.</p>
   </section>
@@ -25,15 +29,31 @@ import Base from '../layouts/Base.astro';
 
 <style>
   .hero {
+    position: relative;
     padding: var(--space-2xl) 0;
   }
 
+  .hero-watermark {
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .hero-watermark :global(.watermark) {
+    color: var(--shadow);
+    opacity: 0.3;
+  }
+
   .hero h1 {
+    position: relative;
     font-size: 3rem;
     margin-bottom: var(--space-md);
   }
 
   .tagline {
+    position: relative;
     font-size: 1.125rem;
     color: var(--stone);
   }
