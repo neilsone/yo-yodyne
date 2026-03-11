@@ -94,6 +94,19 @@
 - [x] Create CHANGELOG.md
 - [x] Document external project plugin process (subdomain setup — in cloudflare-setup.md)
 
+## Phase 8b: Brand & Visual Identity
+
+- [x] Source Yo-Yodyne logo (yo-yodyne.svg)
+- [x] Define PNW sunset palette (evergreen #2d4a3e, sunset gold #c4943d, ochre #a08540)
+- [x] Refine logo geometry — symmetric, aligned to original proportions (yo-yodyne-refined.svg)
+- [x] Create portfolio favicon (favicon-portfolio.svg — evergreen + sunset gold, transparent bg)
+- [x] Create labs favicon (favicon.svg — ink-green + ochre on parchment bg)
+- [x] Build LogoMark.astro reusable component (inline SVG, currentColor, configurable size)
+- [x] Integrate logo into Nav (22px mark before site title, evergreen → gold on hover)
+- [x] Integrate logo into Footer (16px mark as quiet signature)
+- [x] Integrate logo into Hero (280px watermark at 30% opacity)
+- [x] Update design tokens (--accent → sunset gold, --paper → #f5f1ea, add --evergreen, --ochre)
+
 ## Phase 9: Archive & First Release
 
 - [x] Fix npm cache permissions

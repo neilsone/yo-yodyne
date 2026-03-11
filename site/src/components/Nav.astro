@@ -1,8 +1,11 @@
 ---
-// Nav — minimal top bar
+import LogoMark from './LogoMark.astro';
 ---
 <nav>
-  <a href="/labs/" class="logo">Yo-Yodyne Labs</a>
+  <a href="/labs/" class="logo">
+    <LogoMark size={22} />
+    <span>Yo-Yodyne Labs</span>
+  </a>
   <div class="links">
     <a href="/labs/research/">Research</a>
     <a href="/labs/experiments/">Experiments</a>
@@ -22,11 +25,24 @@
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 300;
     text-decoration: none;
     letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+
+  .logo :global(.logo-mark) {
+    color: var(--evergreen);
+    transition: color var(--duration) var(--ease);
+  }
+
+  .logo:hover :global(.logo-mark) {
+    color: var(--accent);
   }
 
   .links {

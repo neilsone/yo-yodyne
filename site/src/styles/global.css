@@ -20,10 +20,12 @@
 /* --- Tokens --- */
 :root {
   --ink: #2c2c2c;
-  --paper: #f5f2ed;
+  --paper: #f5f1ea;
   --stone: #8a8378;
   --shadow: #d4cfc7;
-  --accent: #b8a88a;
+  --accent: #c4943d;
+  --evergreen: #2d4a3e;
+  --ochre: #a08540;
   --void: #1a1917;
 
   --font-heading: 'Cormorant Garamond', 'Georgia', serif;

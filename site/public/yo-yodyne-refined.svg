@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 44">
-  <rect x="-3" y="-3" width="56" height="50" rx="6" fill="#f5f1ea"/>
-  <g fill="#2f3230">
+  <g fill="#2d4a3e">
+    <!-- Top bar -->
     <polygon points="14.25,0.5 35.88,0.5 32.39,6.4 17.85,6.4"/>
+    <!-- Left arm -->
     <polygon points="11.78,1.55 15.46,7.94 7.34,22 15.46,36.06 11.78,42.45 0,22"/>
+    <!-- Right arm -->
     <polygon points="38.22,1.55 50,22 38.22,42.45 34.54,36.06 42.66,22 34.54,7.94"/>
+    <!-- Bottom bar -->
     <polygon points="17.85,37.6 32.39,37.6 35.88,43.5 14.25,43.5"/>
   </g>
-  <circle cx="25" cy="22" r="3.7" fill="#a08540"/>
+  <circle cx="25" cy="22" r="3.7" fill="#c4943d"/>
 </svg>
