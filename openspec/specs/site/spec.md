@@ -10,15 +10,15 @@
 #### Scenario: URL Structure
 - GIVEN the Yo-Yodyne web presence
 - WHEN users access the labs site
-- THEN it SHALL be served at `yo-yodyne.com/labs/`
+- THEN it SHALL be served at `labs.yo-yodyne.com`
 - AND subfolder organization SHALL be used for content sections
 - AND individual projects SHALL be deployed as subdomains (`project.yo-yodyne.com`)
 
-#### Scenario: Reverse Proxy
-- GIVEN requests to `yo-yodyne.com/labs/*`
-- WHEN the Cloudflare Worker intercepts them
-- THEN it SHALL proxy to the Cloudflare Pages deployment
-- AND all other requests SHALL pass through to Adobe Portfolio
+#### Scenario: Subdomain Hosting
+- GIVEN the labs site deployment
+- WHEN it is hosted on Cloudflare Pages
+- THEN it SHALL be served via CNAME record pointing to `yo-yodyne-labs.pages.dev`
+- AND the main domain `yo-yodyne.com` SHALL remain on Adobe Portfolio
 
 ## Requirement: Technology
 
