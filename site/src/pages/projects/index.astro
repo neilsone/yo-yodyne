@@ -19,7 +19,7 @@ const projects = (await getCollection('projects'))
             title={project.data.title}
             href={project.data.subdomain
               ? `https://${project.data.subdomain}.yo-yodyne.com`
-              : `/labs/projects/${project.id}/`}
+              : `/projects/${project.id}/`}
             date={project.data.date}
             description={project.data.tagline}
             tags={project.data.tags}

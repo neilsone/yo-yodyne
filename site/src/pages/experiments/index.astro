@@ -16,7 +16,7 @@ const experiments = (await getCollection('experiments'))
         {experiments.map((exp) => (
           <ContentCard
             title={exp.data.title}
-            href={`/labs/experiments/${exp.id}/`}
+            href={`/experiments/${exp.id}/`}
             date={exp.data.date}
             description={exp.data.hypothesis}
             tags={exp.data.tags}

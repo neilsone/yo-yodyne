@@ -17,7 +17,7 @@ const posts = (await getCollection('research'))
         {posts.map((post) => (
           <ContentCard
             title={post.data.title}
-            href={`/labs/research/${post.id}/`}
+            href={`/research/${post.id}/`}
             date={post.data.date}
             description={post.data.abstract}
             tags={post.data.tags}

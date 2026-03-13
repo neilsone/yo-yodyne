@@ -7,14 +7,14 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url('/labs/fonts/cormorant-garamond-variable-latin.woff2') format('woff2');
+  src: url('/fonts/cormorant-garamond-variable-latin.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Karla';
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url('/labs/fonts/karla-variable-latin.woff2') format('woff2');
+  src: url('/fonts/karla-variable-latin.woff2') format('woff2');
 }
 
 /* --- Tokens --- */
