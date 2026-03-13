@@ -13,7 +13,7 @@ Neilson Eney is an independent researcher and 30-year software engineering veter
 
 The hub must:
 
-1. Provide a public-facing labs site at `yo-yodyne.com/labs` that embodies the brand
+1. Provide a public-facing labs site at `labs.yo-yodyne.com` that embodies the brand
 2. Establish an AI agent team that operates under loose, creatively autonomous working agreements
 3. Support the full lifecycle from research ideation through curated publication
 4. Enforce engineering rigor (specs, gating, release channels) without constraining creative autonomy
@@ -25,7 +25,7 @@ The hub must:
 1. **Organizational Structure** — Four loosely coupled units with creative autonomy
 2. **Agent Team** — Claude Code Teams for PI, researchers, engineers, technicians, writers, creative producers
 3. **Working Agreements** — Common + unit-specific standards; creative decisions owned by producing unit
-4. **Static Site** — Astro-based site at `yo-yodyne.com/labs` via Cloudflare Worker + Cloudflare Pages
+4. **Static Site** — Astro-based site at `labs.yo-yodyne.com` via Cloudflare Pages
 5. **CI/CD** — GitHub Actions for site deployment + release gating
 6. **OpenSpec Integration** — OPSX workflow as the standard for all changes
 7. **Release Process** — Alpha → Beta → Stable channels with Release Readiness Reviews
@@ -121,27 +121,26 @@ The **Tech unit** maintains a dependency registry (`engineering/dependencies/reg
 
 ## Hosting Architecture
 
-### Decision: `yo-yodyne.com/labs` via Cloudflare Worker Reverse Proxy
+### Decision: `labs.yo-yodyne.com` via Cloudflare Pages Subdomain
 
 ```
-yo-yodyne.com/*           → Adobe Portfolio (default)
-yo-yodyne.com/labs/*      → Cloudflare Worker → yo-yodyne-labs.pages.dev
+yo-yodyne.com             → Adobe Portfolio (photography/portfolio)
+labs.yo-yodyne.com        → Cloudflare Pages (yo-yodyne-labs.pages.dev)
 *.yo-yodyne.com           → Project subdomains (CNAME to respective hosts)
 ```
 
 **Setup sequence:**
 1. Deploy Astro site to Cloudflare Pages (`yo-yodyne-labs.pages.dev`)
-2. Ensure Adobe Portfolio domain is verified and working
-3. Switch Cloudflare A records from grey cloud (DNS-only) to orange cloud (proxied)
-4. Deploy Cloudflare Worker on route `yo-yodyne.com/labs/*`
-5. Verify both Adobe Portfolio root and `/labs` site function correctly
+2. Add CNAME record: `labs` → `yo-yodyne-labs.pages.dev` (proxied)
+3. Add `labs.yo-yodyne.com` as custom domain on Pages project
+4. Verify both Adobe Portfolio root and labs subdomain function correctly
 
-**URL structure under /labs:**
-- `yo-yodyne.com/labs/` — Labs homepage
-- `yo-yodyne.com/labs/research/` — Research articles and summaries
-- `yo-yodyne.com/labs/experiments/` — Experiment logs
-- `yo-yodyne.com/labs/projects/` — Project index
-- `yo-yodyne.com/labs/about/` — About the lab
+**URL structure:**
+- `labs.yo-yodyne.com/` — Labs homepage
+- `labs.yo-yodyne.com/research/` — Research articles and summaries
+- `labs.yo-yodyne.com/experiments/` — Experiment logs
+- `labs.yo-yodyne.com/projects/` — Project index
+- `labs.yo-yodyne.com/about/` — About the lab
 
 **Subdomain strategy for projects:**
 - `projectname.yo-yodyne.com` — Individual project sites

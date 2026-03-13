@@ -1,12 +1,12 @@
 # Yo-Yodyne
 
-Research hub and creative production orchestration for [yo-yodyne.com/labs](https://yo-yodyne.com/labs).
+Research hub and creative production orchestration for [labs.yo-yodyne.com](https://labs.yo-yodyne.com).
 
 ## Structure
 
 ```
 openspec/       Specifications and change management (OPSX workflow)
-site/           Astro static site → yo-yodyne.com/labs
+site/           Astro static site → labs.yo-yodyne.com
 research/       Research artifacts
 engineering/    Standards, working agreements, templates
 production/     Creative briefs, content staging, multimedia

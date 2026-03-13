@@ -34,7 +34,7 @@ yo-yodyne/
 │   ├── changes/
 │   └── archive/
 │
-├── site/                               # Astro static site (yo-yodyne.com/labs)
+├── site/                               # Astro static site (labs.yo-yodyne.com)
 │   ├── astro.config.mjs
 │   ├── package.json
 │   ├── src/
@@ -203,37 +203,6 @@ const projects = defineCollection({
 }
 ```
 
-### Cloudflare Worker (`worker/labs-proxy.js`)
-
-```javascript
-export default {
-  async fetch(request) {
-    const url = new URL(request.url);
-
-    // Only intercept /labs paths
-    if (!url.pathname.startsWith('/labs')) {
-      return fetch(request);
-    }
-
-    // Rewrite to Cloudflare Pages origin
-    const labsUrl = new URL(url.pathname.replace(/^\/labs/, '') || '/',
-      'https://yo-yodyne-labs.pages.dev');
-    labsUrl.search = url.search;
-
-    const response = await fetch(labsUrl.toString(), {
-      headers: request.headers,
-      method: request.method,
-    });
-
-    // Return with original headers, add cache control
-    return new Response(response.body, {
-      status: response.status,
-      headers: response.headers,
-    });
-  }
-};
-```
-
 ### Astro Configuration (`astro.config.mjs`)
 
 ```javascript
@@ -242,8 +211,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://yo-yodyne.com',
-  base: '/labs',
+  site: 'https://labs.yo-yodyne.com',
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {
@@ -252,6 +220,9 @@ export default defineConfig({
   },
 });
 ```
+
+> **Note:** The Worker reverse proxy (`worker/labs-proxy.js`) is retained in the repo
+> but is no longer used. The site is served directly via Cloudflare Pages subdomain.
 
 ## Agent Team Configuration
 
@@ -280,9 +251,8 @@ PI dispatches work via creative briefs (Production-initiated) or proposals (OPSX
 
 ### Site Deployment (`deploy-site.yml`)
 1. **Trigger:** Push to `main` affecting `site/` directory
-2. **Build:** `npm run build` in `site/` (Astro build with `/labs` base)
+2. **Build:** `npm run build` in `site/`
 3. **Deploy:** Cloudflare Pages via `wrangler pages deploy`
-4. **Worker:** Deploy/update the labs proxy Worker
 
 ### Release Gating (`release-gate.yml`)
 1. **Trigger:** Tag matching `v*`
@@ -296,8 +266,7 @@ PI dispatches work via creative briefs (Production-initiated) or proposals (OPSX
 ## Cloudflare Setup Steps
 
 1. Deploy Astro site to Cloudflare Pages project `yo-yodyne-labs`
-2. Verify Adobe Portfolio custom domain is working at yo-yodyne.com
-3. In Cloudflare DNS, switch A records from DNS-only to Proxied
-4. Create Worker route: `yo-yodyne.com/labs/*` → labs-proxy Worker
-5. Test both Adobe Portfolio and /labs site
-6. For future projects: add CNAME records for subdomains → respective Pages projects
+2. Add CNAME record: `labs` → `yo-yodyne-labs.pages.dev` (proxied)
+3. Add `labs.yo-yodyne.com` as custom domain on Pages project
+4. Verify both Adobe Portfolio (yo-yodyne.com) and labs subdomain function correctly
+5. For future projects: add CNAME records for subdomains → respective Pages projects

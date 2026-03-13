@@ -63,7 +63,7 @@
 ## Phase 5: Astro Site
 
 - [x] Initialize Astro project in site/
-- [x] Configure astro.config.mjs with /labs base path
+- [x] Configure astro.config.mjs (subdomain: labs.yo-yodyne.com)
 - [x] Define Content Collections (research, experiments, projects)
 - [x] Create design tokens (wabi-sabi palette, typography)
 - [x] Build Base layout (nav, footer, brand shell)
@@ -75,11 +75,12 @@
 - [x] Self-host fonts (Cormorant Garamond, Karla — variable woff2)
 - [x] Verify Astro build (`cd site && npm install && npm run build`)
 
-## Phase 6: Cloudflare Worker
+## Phase 6: Cloudflare Hosting
 
-- [x] Write labs-proxy.js reverse proxy Worker
-- [x] Write wrangler.toml configuration
-- [ ] Deploy Worker and configure route (requires Cloudflare credentials)
+- [x] Create Cloudflare Pages project (yo-yodyne-labs)
+- [x] Add CNAME record: labs → yo-yodyne-labs.pages.dev
+- [x] Add labs.yo-yodyne.com as custom domain on Pages project
+- [x] Verify site at labs.yo-yodyne.com
 
 ## Phase 7: CI/CD
 
@@ -114,7 +115,9 @@
 - [x] Download and place web fonts in site/public/fonts/
 - [x] Set up git remote
 - [x] Initial commit and push to labs-init branch
-- [ ] Set up Cloudflare Pages project (PI — see engineering/guides/cloudflare-setup.md)
-- [ ] Deploy Cloudflare Worker (PI)
-- [ ] Configure DNS (PI — switch A records to proxied, add Worker route)
+- [x] Set up Cloudflare Pages project
+- [x] Configure DNS (CNAME labs → yo-yodyne-labs.pages.dev)
+- [x] Pivot from /labs subpath to labs.yo-yodyne.com subdomain
+- [x] Deploy site to labs.yo-yodyne.com
+- [x] Update specs and docs to reflect subdomain architecture
 - [ ] Push to main and tag v0.1.0-alpha.1

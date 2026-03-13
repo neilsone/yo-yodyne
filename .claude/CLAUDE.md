@@ -21,7 +21,7 @@ Run agents in tmux sessions named after their role: `pi`, `research`, `engineeri
 ## Key Paths
 
 - `openspec/` — Specifications and change management
-- `site/` — Astro static site (yo-yodyne.com/labs)
+- `site/` — Astro static site (labs.yo-yodyne.com)
 - `research/` — Research artifacts
 - `engineering/` — Standards, agreements, templates
 - `production/` — Creative briefs, content staging, assets

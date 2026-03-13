@@ -10,7 +10,7 @@ The project orchestrates research, engineering, and creative production through 
 
 - **Name:** Neilson P. Eney
 - **Domain:** yo-yodyne.com (Adobe Portfolio — photography/portfolio)
-- **Labs Site:** yo-yodyne.com/labs (Cloudflare Worker → Cloudflare Pages — research hub)
+- **Labs Site:** labs.yo-yodyne.com (Cloudflare Pages — research hub)
 - **GitHub:** github.com/neilsone
 - **Primary Repo:** github.com/neilsone/yo-yodyne
 - **Project Subdomains:** `*.yo-yodyne.com` for individual projects/programs
@@ -20,7 +20,7 @@ The project orchestrates research, engineering, and creative production through 
 | Layer | Technology | Version |
 |---|---|---|
 | Static Site Generator | Astro | latest |
-| Hosting (labs) | Cloudflare Pages + Worker reverse proxy | — |
+| Hosting (labs) | Cloudflare Pages | — |
 | DNS / CDN | Cloudflare | — |
 | CI/CD | GitHub Actions | — |
 | Spec Framework | OpenSpec (OPSX) | latest |
@@ -33,13 +33,13 @@ The project orchestrates research, engineering, and creative production through 
 
 ```
 yo-yodyne.com                     Adobe Portfolio (photography/portfolio)
-yo-yodyne.com/labs/*              Cloudflare Worker → yo-yodyne-labs.pages.dev (Astro)
+labs.yo-yodyne.com                Cloudflare Pages → yo-yodyne-labs.pages.dev (Astro)
 *.yo-yodyne.com                   Project subdomains (independent repos)
 
 yo-yodyne/                        This repo — orchestration hub
 ├── openspec/                     Spec-driven development (source of truth)
 ├── .claude/teams/                Agent team definitions
-├── site/                         Astro static site (yo-yodyne.com/labs)
+├── site/                         Astro static site (labs.yo-yodyne.com)
 ├── research/                     Research artifacts
 ├── engineering/                  Engineering standards, templates, tooling
 ├── production/                   Creative production, briefs, multimedia
@@ -78,5 +78,5 @@ yo-yodyne/                        This repo — orchestration hub
 | Artifact | Any deliverable: paper, spec, code, site content, media |
 | Creative Brief | Production-initiated task that can drive work across units |
 | PI | Principal Investigator — Neilson Eney |
-| Labs | The public-facing research hub site at yo-yodyne.com/labs |
+| Labs | The public-facing research hub site at labs.yo-yodyne.com |
 | RRR | Release Readiness Review — gating checklist for releases |
