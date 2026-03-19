@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 740" width="420" height="740">
+  <defs>
+    <pattern id="cream-texture" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#f5f1ea"/>
+      <circle cx="2" cy="2" r="0.3" fill="#ece8df" opacity="0.5"/>
+    </pattern>
+    <pattern id="polkadots-a" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#2c2c2c"/>
+      <circle cx="4" cy="4" r="1.8" fill="#d4878f"/>
+    </pattern>
+    <pattern id="polkadots-b" width="7" height="7" patternUnits="userSpaceOnUse">
+      <rect width="7" height="7" fill="#e8e2d6"/>
+      <circle cx="3.5" cy="3.5" r="1.5" fill="#4a7a9b"/>
+    </pattern>
+    <pattern id="stripes-a" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#2c2c2c"/>
+      <rect width="3" height="6" fill="#c4943d"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="420" height="740" fill="url(#cream-texture)"/>
+
+  <!-- Title -->
+  <text x="210" y="35" font-family="Georgia, serif" font-size="14" fill="#8a8378" text-anchor="middle" letter-spacing="3">SPINE ANATOMY</text>
+
+  <!-- Sleeve body -->
+  <rect x="155" y="60" width="60" height="620" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="1.5"/>
+
+  <!-- Sleeve opening indicator at top -->
+  <line x1="153" y1="60" x2="217" y2="60" stroke="#8a8378" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="185" y="52" font-family="Georgia, serif" font-size="10" fill="#8a8378" text-anchor="middle">opening</text>
+  <path d="M 175 48 L 185 42 L 195 48" fill="none" stroke="#8a8378" stroke-width="1"/>
+
+  <!-- Sealed edge at bottom -->
+  <line x1="155" y1="680" x2="215" y2="680" stroke="#2c2c2c" stroke-width="2"/>
+
+  <!-- ===== TOP REGION: Resident crate sticker ===== -->
+  <rect x="163" y="110" width="44" height="55" rx="3" fill="#c4943d" opacity="0.85"/>
+  <text x="185" y="134" font-family="Georgia, serif" font-size="7.5" fill="#2c2c2c" text-anchor="middle" font-style="italic">Trip-Hop</text>
+  <text x="185" y="147" font-family="Georgia, serif" font-size="7.5" fill="#2c2c2c" text-anchor="middle" font-style="italic">Essentials</text>
+
+  <!-- ===== MIDDLE REGION: Genre dots ===== -->
+  <circle cx="175" cy="320" r="10" fill="#2d4a3e"/>
+  <circle cx="197" cy="320" r="10" fill="#4a7a9b"/>
+
+  <!-- ===== BOTTOM REGION: Session tags ===== -->
+  <!-- Tag 1: Weddings (DJ A) -->
+  <rect x="163" y="490" width="44" height="22" rx="3" fill="url(#polkadots-a)"/>
+  <text x="185" y="505" font-family="Georgia, serif" font-size="6" fill="#f5f1ea" text-anchor="middle" font-weight="bold">WEDDINGS</text>
+
+  <!-- Tag 2: Pride Party (DJ B) -->
+  <rect x="163" y="518" width="44" height="22" rx="3" fill="url(#polkadots-b)"/>
+  <text x="185" y="533" font-family="Georgia, serif" font-size="6" fill="#2c2c2c" text-anchor="middle" font-weight="bold">PRIDE PARTY</text>
+
+  <!-- Tag 3: Shadow Play (DJ A) -->
+  <rect x="163" y="546" width="44" height="22" rx="3" fill="url(#stripes-a)"/>
+  <text x="185" y="561" font-family="Georgia, serif" font-size="6" fill="#f5f1ea" text-anchor="middle" font-weight="bold">SHADOW PLAY</text>
+
+  <!-- ===== Zone brackets &#x2014; LEFT SIDE ===== -->
+  <!-- Top zone bracket -->
+  <path d="M 135 90 L 130 90 L 130 190 L 135 190" fill="none" stroke="#c4943d" stroke-width="1.5"/>
+  <text x="123" y="134" font-family="Georgia, serif" font-size="11" fill="#c4943d" text-anchor="end" font-style="italic">resident</text>
+  <text x="123" y="148" font-family="Georgia, serif" font-size="11" fill="#c4943d" text-anchor="end" font-style="italic">crate</text>
+
+  <!-- Middle zone bracket -->
+  <path d="M 135 280 L 130 280 L 130 370 L 135 370" fill="none" stroke="#c4943d" stroke-width="1.5"/>
+  <text x="123" y="322" font-family="Georgia, serif" font-size="11" fill="#c4943d" text-anchor="end" font-style="italic">genre</text>
+  <text x="123" y="336" font-family="Georgia, serif" font-size="11" fill="#c4943d" text-anchor="end" font-style="italic">dots</text>
+
+  <!-- Bottom zone bracket -->
+  <path d="M 135 470 L 130 470 L 130 590 L 135 590" fill="none" stroke="#c4943d" stroke-width="1.5"/>
+  <text x="123" y="524" font-family="Georgia, serif" font-size="11" fill="#c4943d" text-anchor="end" font-style="italic">session</text>
+  <text x="123" y="538" font-family="Georgia, serif" font-size="11" fill="#c4943d" text-anchor="end" font-style="italic">tags</text>
+
+  <!-- ===== RIGHT SIDE annotations ===== -->
+  <!-- Top: resident crate -->
+  <line x1="225" y1="137" x2="250" y2="137" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="255" y="125" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">one at a time</text>
+  <text x="255" y="138" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">cover over to change</text>
+  <text x="255" y="153" font-family="Georgia, serif" font-size="9.5" fill="#2d4a3e" font-weight="bold">determines routing</text>
+  <text x="255" y="170" font-family="Georgia, serif" font-size="8.5" fill="#8a8378" font-style="italic">&#x2191; maps to Rows 1&#x2013;2</text>
+
+  <!-- Middle: genre dots -->
+  <line x1="225" y1="320" x2="250" y2="320" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="255" y="313" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">permanent</text>
+  <text x="255" y="326" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">multiple allowed</text>
+  <text x="255" y="343" font-family="Georgia, serif" font-size="8.5" fill="#8a8378" font-style="italic">&#x2194; maps to Rows 3&#x2013;4</text>
+
+  <!-- Bottom: session tags -->
+  <line x1="225" y1="530" x2="250" y2="530" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="255" y="516" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">named session classes</text>
+  <text x="255" y="529" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">max 3 per DJ</text>
+  <text x="255" y="542" font-family="Georgia, serif" font-size="9.5" fill="#8a8378">max 4 total per record</text>
+  <text x="255" y="557" font-family="Georgia, serif" font-size="9.5" fill="#8a8378" font-style="italic">never routing</text>
+
+  <!-- TOP / BOTTOM labels -->
+  <text x="360" y="68" font-family="Georgia, serif" font-size="10" fill="#8a8378" text-anchor="middle" letter-spacing="2">TOP</text>
+  <text x="360" y="685" font-family="Georgia, serif" font-size="10" fill="#8a8378" text-anchor="middle" letter-spacing="2">BOTTOM</text>
+
+  <!-- Directional arrow -->
+  <line x1="360" y1="78" x2="360" y2="670" stroke="#d4cfc7" stroke-width="1" stroke-dasharray="6,4"/>
+  <path d="M 355 665 L 360 675 L 365 665" fill="none" stroke="#d4cfc7" stroke-width="1"/>
+</svg>

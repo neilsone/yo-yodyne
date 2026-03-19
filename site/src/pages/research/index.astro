@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import ContentCard from '../../components/ContentCard.astro';
 
 const posts = (await getCollection('research'))
-  .filter((post) => post.data.status === 'published')
+  .filter((post) => post.data.status !== 'draft')
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Base title="Research">

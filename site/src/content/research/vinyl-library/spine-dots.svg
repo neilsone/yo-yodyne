@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380">
+  <defs>
+    <pattern id="cream-sd" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#f5f1ea"/>
+      <circle cx="2" cy="1" r="0.2" fill="#ece8df" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="380" fill="url(#cream-sd)"/>
+
+  <!-- Title -->
+  <text x="350" y="25" font-family="Georgia, serif" font-size="13" fill="#8a8378" text-anchor="middle" letter-spacing="3">LIBRARY SPINES &#x2014; ALPHABETICAL WITH GENRE DOTS</text>
+
+  <!-- Cubby outline -->
+  <rect x="30" y="40" width="640" height="300" rx="2" fill="none" stroke="#8a8378" stroke-width="1.5"/>
+
+  <!-- Shelf top shadow -->
+  <rect x="30" y="40" width="640" height="4" fill="#d4cfc7" opacity="0.4"/>
+
+  <!-- === Letter divider: D === -->
+  <rect x="60" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="50" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="62" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">D</text>
+
+  <!-- Record spines after D -->
+  <!-- Spine 1: Daft Punk? - electronic dot -->
+  <rect x="72" y="52" width="7" height="278" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="75.5" cy="185" r="3.5" fill="#d4c44a"/>
+
+  <!-- Spine 2 - downtempo + hip-hop -->
+  <rect x="82" y="50" width="7" height="280" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="85.5" cy="182" r="3.5" fill="#4a7a9b"/>
+  <circle cx="85.5" cy="192" r="3.5" fill="#2c2c2c"/>
+
+  <!-- Spine 3 - funk -->
+  <rect x="92" y="53" width="7" height="277" rx="1" fill="#c8c1b4" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="95.5" cy="185" r="3.5" fill="#2d4a3e"/>
+
+  <!-- Spine 4 - pop -->
+  <rect x="102" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="105.5" cy="185" r="3.5" fill="#d4784a"/>
+
+  <!-- Spine 5 - no dots yet -->
+  <rect x="112" y="52" width="7" height="278" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+
+  <!-- Spine 6 - high energy + pop -->
+  <rect x="122" y="50" width="7" height="280" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="125.5" cy="182" r="3.5" fill="#d44a4a"/>
+  <circle cx="125.5" cy="192" r="3.5" fill="#d4784a"/>
+
+  <!-- Spine 7 -->
+  <rect x="132" y="53" width="7" height="277" rx="1" fill="#c0b8aa" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="135.5" cy="185" r="3.5" fill="#4a7a9b"/>
+
+  <!-- === Letter divider: E === -->
+  <rect x="155" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="145" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="157" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">E</text>
+
+  <!-- Spines after E -->
+  <rect x="167" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="170.5" cy="185" r="3.5" fill="#d4c44a"/>
+  <circle cx="170.5" cy="195" r="3.5" fill="#4a7a9b"/>
+
+  <rect x="177" y="53" width="7" height="277" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="180.5" cy="185" r="3.5" fill="#2d4a3e"/>
+
+  <rect x="187" y="50" width="7" height="280" rx="1" fill="#c8c1b4" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="190.5" cy="182" r="3.5" fill="#d44a4a"/>
+
+  <rect x="197" y="52" width="7" height="278" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+
+  <rect x="207" y="51" width="7" height="279" rx="1" fill="#c0b8aa" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="210.5" cy="185" r="3.5" fill="#7a5c8a"/>
+
+  <!-- === Letter divider: F === -->
+  <rect x="230" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="220" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="232" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">F</text>
+
+  <!-- Spines after F -->
+  <rect x="242" y="52" width="7" height="278" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="245.5" cy="185" r="3.5" fill="#2d4a3e"/>
+  <circle cx="245.5" cy="195" r="3.5" fill="#d44a4a"/>
+
+  <rect x="252" y="50" width="7" height="280" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="255.5" cy="185" r="3.5" fill="#2d4a3e"/>
+
+  <rect x="262" y="53" width="7" height="277" rx="1" fill="#c8c1b4" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="265.5" cy="185" r="3.5" fill="#d4784a"/>
+
+  <rect x="272" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="275.5" cy="182" r="3.5" fill="#2c2c2c"/>
+  <circle cx="275.5" cy="192" r="3.5" fill="#4a7a9b"/>
+
+  <rect x="282" y="52" width="7" height="278" rx="1" fill="#c0b8aa" stroke="#b5ae9f" stroke-width="0.5"/>
+
+  <rect x="292" y="50" width="7" height="280" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="295.5" cy="185" r="3.5" fill="#2d4a3e"/>
+
+  <rect x="302" y="53" width="7" height="277" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="305.5" cy="185" r="3.5" fill="#d4c44a"/>
+
+  <!-- === Letter divider: G === -->
+  <rect x="325" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="315" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="327" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">G</text>
+
+  <!-- Spines after G -->
+  <rect x="337" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="340.5" cy="185" r="3.5" fill="#d44a4a"/>
+
+  <rect x="347" y="53" width="7" height="277" rx="1" fill="#c8c1b4" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="350.5" cy="182" r="3.5" fill="#2d4a3e"/>
+  <circle cx="350.5" cy="192" r="3.5" fill="#d4784a"/>
+
+  <rect x="357" y="50" width="7" height="280" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="360.5" cy="185" r="3.5" fill="#4a7a9b"/>
+
+  <rect x="367" y="52" width="7" height="278" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+
+  <rect x="377" y="51" width="7" height="279" rx="1" fill="#c0b8aa" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="380.5" cy="185" r="3.5" fill="#2c2c2c"/>
+
+  <!-- === Letter divider: H === -->
+  <rect x="400" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="390" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="402" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">H</text>
+
+  <!-- Spines after H -->
+  <rect x="412" y="52" width="7" height="278" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="415.5" cy="185" r="3.5" fill="#d4784a"/>
+
+  <rect x="422" y="50" width="7" height="280" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="425.5" cy="182" r="3.5" fill="#d4c44a"/>
+  <circle cx="425.5" cy="192" r="3.5" fill="#2c2c2c"/>
+
+  <rect x="432" y="53" width="7" height="277" rx="1" fill="#c8c1b4" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="435.5" cy="185" r="3.5" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+
+  <rect x="442" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="445.5" cy="185" r="3.5" fill="#4a7a9b"/>
+
+  <rect x="452" y="52" width="7" height="278" rx="1" fill="#c0b8aa" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="455.5" cy="182" r="3.5" fill="#2d4a3e"/>
+  <circle cx="455.5" cy="192" r="3.5" fill="#d44a4a"/>
+
+  <rect x="462" y="50" width="7" height="280" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+
+  <rect x="472" y="53" width="7" height="277" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="475.5" cy="185" r="3.5" fill="#7a5c8a"/>
+
+  <!-- === Letter divider: I === -->
+  <rect x="498" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="488" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="500" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">I</text>
+
+  <!-- Sparse section after I -->
+  <rect x="510" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="513.5" cy="185" r="3.5" fill="#d4784a"/>
+  <circle cx="513.5" cy="195" r="3.5" fill="#2d4a3e"/>
+
+  <rect x="520" y="53" width="7" height="277" rx="1" fill="#c8c1b4" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="523.5" cy="185" r="3.5" fill="#4a7a9b"/>
+
+  <!-- === Letter divider: J === -->
+  <rect x="545" y="37" width="3" height="305" fill="#8a8378"/>
+  <rect x="535" y="28" width="24" height="16" rx="2" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <text x="547" y="40" font-family="Georgia, serif" font-size="11" fill="#2c2c2c" text-anchor="middle" font-weight="bold">J</text>
+
+  <!-- Spines after J -->
+  <rect x="557" y="52" width="7" height="278" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="560.5" cy="185" r="3.5" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+
+  <rect x="567" y="50" width="7" height="280" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="570.5" cy="182" r="3.5" fill="#e8e2d6" stroke="#8a8378" stroke-width="0.75"/>
+  <circle cx="570.5" cy="192" r="3.5" fill="#4a7a9b"/>
+
+  <rect x="577" y="53" width="7" height="277" rx="1" fill="#c0b8aa" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="580.5" cy="185" r="3.5" fill="#2d4a3e"/>
+
+  <rect x="587" y="51" width="7" height="279" rx="1" fill="#d4cfc7" stroke="#b5ae9f" stroke-width="0.5"/>
+  <circle cx="590.5" cy="185" r="3.5" fill="#2c2c2c"/>
+
+  <rect x="597" y="52" width="7" height="278" rx="1" fill="#ccc5b7" stroke="#b5ae9f" stroke-width="0.5"/>
+
+  <!-- Annotation: arrow pointing to middle dots -->
+  <line x1="640" y1="185" x2="610" y2="185" stroke="#c4943d" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="645" y="178" font-family="Georgia, serif" font-size="9" fill="#c4943d" font-style="italic">genre dots</text>
+  <text x="645" y="190" font-family="Georgia, serif" font-size="9" fill="#c4943d" font-style="italic">(middle region)</text>
+
+  <!-- Bottom annotation -->
+  <text x="350" y="365" font-family="Georgia, serif" font-size="10" fill="#8a8378" text-anchor="middle" font-style="italic">Alphabetical dividers organize. Genre dots on the spine enable browsing by vibe.</text>
+</svg>
